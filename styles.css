@@ -1,0 +1,231 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 7px;
+    width: 93%;
+    background-color: rgb(9, 91, 97);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    transition: background-color 0.3s ease;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* Change menu item color on hover */
+.nav-links a:hover {
+    color: #FF6600; 
+}
+
+.navbar.scrolled {
+    background-color: white;
+}
+
+.navbar.scrolled .logo a {
+    color: black;
+}
+
+.navbar.scrolled .nav-links a {
+    color: black;
+}
+
+/* Mobile responsive menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+}
+
+.navbar.mobile-open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar.mobile-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.mobile-open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .navbar.mobile-open .nav-links {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .navbar.mobile-open .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+.home {
+    background: url('images/back2.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:rgb(19, 18, 18);
+}
+
+.home-content {
+    margin-bottom: 17%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.home h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.home p{
+    font-family: cursive;
+    font-size: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(9, 67, 71);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FF3300; 
+}
+
+.features {
+    background-color: rgb(212, 218, 221);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+.features p{
+    font-family: cursive;
+    font-size: large;
+}
+.contact {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:brown;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF3300; /* Custom hover color */
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
